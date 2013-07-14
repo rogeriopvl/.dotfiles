@@ -1,0 +1,10 @@
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[user]
+	name = rogeriopvl
+	email = rogeriopvl@gmail.com
+[core]
+	excludesfile = /Users/rogeriopvl/.gitignore_global
+	editor = /usr/bin/vim

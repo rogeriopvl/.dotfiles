@@ -42,11 +42,12 @@ export PATH="/usr/local/share/npm/bin:/Users/rogeriopvl/bin:$PATH"
 # export NODE_PATH="/usr/local/lib/node"
 # export PATH="$(brew --prefix php54)/bin:$PATH"
 
-# needed because of ruby yaml and stuff
-export LC_ALL="en_US.UTF-8"
+export EDITOR=/usr/bin/vim
 
 # ALIAS
 
+# needed because of ruby yaml and stuff
+alias jekyll="LANG=en_US.UTF-8 jekyll"
 alias tmux=tmux -u
 alias calibreserver="sudo /Applications/calibre.app/Contents/MacOS/calibre-server -p 443"
 # alias rake='noglob rake'

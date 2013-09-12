@@ -27,7 +27,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-unsetopt correct_all
+# unsetopt correct_all
 
 # Customize to your needs...
 
@@ -37,25 +37,35 @@ DISABLE_AUTO_TITLE=true
 # EXPORTS
 
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-export PATH="/usr/local/share/npm/bin:/Users/rogeriopvl/bin:$PATH"
+export PATH="/usr/local/share/npm/bin:/Users/rogeriopvl/bin:/Users/rogeriopvl/.gocode/bin:$PATH"
 # export PATH="/Users/rogeriopvl/.rbenv/bin:$PATH"
 # export NODE_PATH="/usr/local/lib/node"
 # export PATH="$(brew --prefix php54)/bin:$PATH"
 
 export EDITOR=/usr/bin/vim
 
+# for GOLANG external modules
+export GOPATH=/Users/rogeriopvl/.gocode
+
+# env variables for cli tools
+source ~/.cli_env
+
 # ALIAS
+
+## Programs
 
 # needed because of ruby yaml and stuff
 alias jekyll="LANG=en_US.UTF-8 jekyll"
 alias tmux=tmux -u
 alias calibreserver="sudo /Applications/calibre.app/Contents/MacOS/calibre-server -p 443"
-# alias rake='noglob rake'
 alias vlc=/Applications/VLC.app/Contents/MacOS/VLC
+
+## Utilities
+
 alias temps="tempmonitor -ds -c -a -l"
 alias sniff="sudo ngrep -W byline -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
 alias remove_context_dups="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain system -domain user"
-# alias google-chrome="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
+
 
 # FUNCTIONS
 

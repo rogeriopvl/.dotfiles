@@ -27,7 +27,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-# unsetopt correct_all
+unsetopt correct_all
 
 # Customize to your needs...
 
@@ -68,6 +68,15 @@ alias remove_context_dups="/System/Library/Frameworks/CoreServices.framework/Ver
 
 
 # FUNCTIONS
+
+# checks if VIM is running in the current tty background
+function is_vim_bg {
+    isbg=$(ps | grep `tty | sed -e 's|/dev/||g'` | grep -i vim | wc -l)
+
+    if [ $isbg -gt 0 ] ; then
+        echo "\e[0;31m❐ VIM\e[m "
+    fi
+}
 
 function rtmp_open() {
     rtmpdump -r $1 --quiet | /Applications/VLC.app/Contents/MacOS/VLC fd://0 --playlist-autostart
@@ -115,3 +124,6 @@ if [ -f `brew --prefix`/etc/autojump.zsh ]; then
 fi
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+
+export PROMPT="$(is_vim_bg)$PROMPT"

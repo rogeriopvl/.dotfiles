@@ -56,7 +56,7 @@ source ~/.cli_env
 
 # needed because of ruby yaml and stuff
 alias jekyll="LANG=en_US.UTF-8 jekyll"
-alias tmux=tmux -u
+alias tmux="tmux -u"
 alias calibreserver="sudo /Applications/calibre.app/Contents/MacOS/calibre-server -p 443"
 alias vlc=/Applications/VLC.app/Contents/MacOS/VLC
 

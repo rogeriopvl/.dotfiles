@@ -2,5 +2,6 @@
 
 ln -s .dotfiles/tmux.conf $HOME/.tmux.conf
 ln -s .dotfiles/zshrc $HOME/.zshrc
+ln -s .dotfiles/zshenv $HOME/.zshenv
 ln -s .dotfiles/gitconfig $HOME/.gitconfig
 ln -s .dotfiles/gitignore_global $HOME/.gitignore_global

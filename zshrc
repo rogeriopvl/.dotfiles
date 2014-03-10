@@ -16,15 +16,12 @@ ZSH_THEME="robbyrussell"
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
 
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git git-flow)
 
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
@@ -33,19 +30,6 @@ unsetopt correct_all
 
 # to avoid tmux losing its window names
 DISABLE_AUTO_TITLE=true
-
-# EXPORTS
-
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-export PATH="/usr/local/share/npm/bin:/Users/rogeriopvl/bin:/Users/rogeriopvl/.gocode/bin:$PATH"
-# export PATH="/Users/rogeriopvl/.rbenv/bin:$PATH"
-# export NODE_PATH="/usr/local/lib/node"
-# export PATH="$(brew --prefix php54)/bin:$PATH"
-
-export EDITOR=/usr/bin/vim
-
-# for GOLANG external modules
-export GOPATH=/Users/rogeriopvl/.gocode
 
 # env variables for cli tools
 source ~/.cli_env
@@ -127,3 +111,6 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 
 export PROMPT="$(is_vim_bg)$PROMPT"
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8

@@ -43,6 +43,7 @@ alias jekyll="LANG=en_US.UTF-8 jekyll"
 alias tmux="tmux -u"
 alias calibreserver="sudo /Applications/calibre.app/Contents/MacOS/calibre-server -p 443"
 alias vlc=/Applications/VLC.app/Contents/MacOS/VLC
+alias ffoxdev="/Applications/Firefox.app/Contents/MacOS/firefox-bin -no-remote -P dev"
 
 ## Utilities
 
@@ -52,6 +53,11 @@ alias remove_context_dups="/System/Library/Frameworks/CoreServices.framework/Ver
 
 
 # FUNCTIONS
+
+precmd() {
+    # sets the tab title to current dir
+    echo -ne "\e]1;${PWD##*/}\a"
+}
 
 # checks if VIM is running in the current tty background
 function is_vim_bg {
@@ -70,6 +76,17 @@ function rtmp_open() {
 function loc() {
 	find . -name *.$1 | xargs wc -l
 }
+
+function checkout-pr() {
+    git fetch origin refs/pull/$1/head:PR$1
+}
+
+# TODO!!!!!!!!!!!!!!!!!
+# function websaver() {
+#     if [ "$1" = "add" ]; then
+#         ln -s "/Users/rogeriopvl/.websavers/"$2 "Users/rogeriopvl/Library/Screen Savers/Web.saver/Contents/Resources/"$2
+#     fi
+# }
 
 # toggle bluetooth on/off
 function bluetooth {
@@ -109,6 +126,8 @@ fi
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+
+export ANDROID_HOME=/usr/local/opt/android-sdk
 
 export PROMPT="$(is_vim_bg)$PROMPT"
 

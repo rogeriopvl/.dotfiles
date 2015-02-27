@@ -120,9 +120,7 @@ function firefox_extdev {
 }
 
 # for autojump
-if [ -f `brew --prefix`/etc/autojump.zsh ]; then
-	  . `brew --prefix`/etc/autojump.zsh
-fi
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 

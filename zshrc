@@ -32,7 +32,7 @@ unsetopt correct_all
 DISABLE_AUTO_TITLE=true
 
 # env variables for cli tools
-source ~/.cli_env
+# source ~/.cli_env
 
 # ALIAS
 
@@ -123,7 +123,6 @@ function firefox_extdev {
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
 

@@ -40,10 +40,14 @@ DISABLE_AUTO_TITLE=true
 
 # needed because of ruby yaml and stuff
 alias jekyll="LANG=en_US.UTF-8 jekyll"
-alias tmux="tmux -u"
 alias calibreserver="sudo /Applications/calibre.app/Contents/MacOS/calibre-server -p 443"
 alias vlc=/Applications/VLC.app/Contents/MacOS/VLC
 alias ffoxdev="/Applications/Firefox.app/Contents/MacOS/firefox-bin -no-remote -P dev"
+alias dug="du -h . | grep '[0-9\.]\+G'"
+alias tmux="tmux -u"
+alias tmuxdev="tmux start-server && tmux attach"
+alias battery="pmset -g batt | egrep \"([0-9]+\%).*\" -o --colour=auto | cut -f1 -d';'"
+alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
 
 ## Utilities
 
@@ -74,7 +78,7 @@ function rtmp_open() {
 
 # count the lines of code from a given file extension in the current folder and recursively
 function loc() {
-	find . -name *.$1 | xargs wc -l
+    find . -name *.$1 | xargs wc -l
 }
 
 function checkout-pr() {
@@ -90,33 +94,41 @@ function checkout-pr() {
 
 # toggle bluetooth on/off
 function bluetooth {
-	osascript -e 'tell application "System Events" to tell process "SystemUIServer" to tell (menu bar item 1 of menu bar 1 whose description is "bluetooth") to {click, click (menu item 2 of menu 1)}'
+    osascript -e 'tell application "System Events" to tell process "SystemUIServer" to tell (menu bar item 1 of menu bar 1 whose description is "bluetooth") to {click, click (menu item 2 of menu 1)}'
 }
 
 # show and hide the desktop icons (for presentations)
 function hide_desktop {
-	defaults write com.apple.finder CreateDesktop -bool false
-	killall Finder
+    defaults write com.apple.finder CreateDesktop -bool false
+    killall Finder
 }
 
 function show_desktop {
-	defaults write com.apple.finder CreateDesktop -bool true
-	killall Finder
+    defaults write com.apple.finder CreateDesktop -bool true
+    killall Finder
 }
 
 # show and hide the hidden files
 function show_hidden_files {
-	defaults write com.apple.finder AppleShowAllFiles TRUE
-	killall Finder
+    defaults write com.apple.finder AppleShowAllFiles TRUE
+    killall Finder
 }
 
 function hide_hidden_files {
-	defaults write com.apple.finder AppleShowAllFiles FALSE
-	killall Finder
+    defaults write com.apple.finder AppleShowAllFiles FALSE
+    killall Finder
 }
 
 function firefox_extdev {
-	/Applications/Firefox.app/Contents/MacOS/firefox-bin -P extdev
+    /Applications/Firefox.app/Contents/MacOS/firefox-bin -P extdev
+}
+
+function wifi_name {
+    /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'
+}
+
+function wifi_pass() {
+    security find-generic-password -D "AirPort network password" -a $(wifi_name) -gw
 }
 
 # for autojump

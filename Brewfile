@@ -46,6 +46,7 @@ cask 'vlc'
 cask 'cyberduck'
 cask 'postman'
 cask 'sonos'
+cask 'webtorrent'
 
 # MAC APP STORE APPS
 mas 'Airmail 3', id: 918858936

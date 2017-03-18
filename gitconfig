@@ -1,16 +1,24 @@
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+    diff = auto
+    status = auto
+    branch = auto
 [user]
-	name = rogeriopvl
-	email = rogeriopvl@gmail.com
+    name = rogeriopvl
+    email = rogeriopvl@gmail.com
 [core]
-	excludesfile = /Users/rogeriopvl/.gitignore_global
-	editor = /usr/local/bin/nvim
+    excludesfile = /Users/rogeriopvl/.gitignore_global
+    editor = /usr/local/bin/nvim
 [merge]
-	tool = vimdiff
-	conflictstyle = diff3
+    tool = vimdiff
+    conflictstyle = diff3
 [mergetool]
-	prompt = false
-	path = nvim
+    prompt = false
+    path = vim
+[alias]
+    lg = log --graph --oneline --decorate
+    plog = log HEAD --pretty=format:%s
+    st = status -sb
+    rrh = pull --rebase origin HEAD
+    prh = push origin HEAD
+[init]
+    templatedir = ~/.dotfiles/git-templates

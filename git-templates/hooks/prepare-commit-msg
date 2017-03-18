@@ -1,0 +1,44 @@
+#!/bin/bash
+
+firstLine=`head -2 $1 | tail -1`
+
+# Testing that the file starts with a comment, not yet a real commit ;)
+if [[ $firstLine == \#* ]]; then
+    echo "
+# Example of angular commit message convention:
+#
+# <type>(<scope/component>): <subject>
+#
+# <body>
+#
+# <footer>
+#
+# LEGEND:
+#
+# subject:
+#   - use imperative, present tense (change, not changed or changes)
+#   - don't capitalize first letter
+#   - no . at the end
+#
+# body:
+#   - use imperative (view subject)
+#   - include motivation for the change and contrast with previous behavior
+#
+# footer:
+#   - should include reference to issues (github or JIRA or whatever)
+#   - should include breaking changes
+#
+# types:
+# - feat: new features
+# - fix: for bug fixes
+# - docs: for documentation
+# - style: for code style stuff
+# - refactor: for code refactoring
+# - test: for adding missing tests
+# - chore: for relases, dependencies, stuff
+#
+    " >> .prepare-commit-msg-temp
+    { cat .prepare-commit-msg-temp; cat $1; } > .prepare-commit-msg-temp2
+    cat .prepare-commit-msg-temp2 > $1
+    rm .prepare-commit-msg-temp .prepare-commit-msg-temp2
+fi

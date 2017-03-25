@@ -32,6 +32,7 @@ brew 'neovim/neovim/neovim'
 cask 'alfred'
 cask 'google-chrome'
 cask 'google-chrome-canary'
+cask 'firefox'
 cask 'iterm2'
 cask 'moom'
 cask 'dash'
@@ -47,6 +48,7 @@ cask 'cyberduck'
 cask 'postman'
 cask 'sonos'
 cask 'webtorrent'
+cask 'visual-studio-code'
 
 # MAC APP STORE APPS
 mas 'Airmail 3', id: 918858936

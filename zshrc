@@ -45,7 +45,7 @@ alias vlc=/Applications/VLC.app/Contents/MacOS/VLC
 alias ffoxdev="/Applications/Firefox.app/Contents/MacOS/firefox-bin -no-remote -P dev"
 alias dug="du -h . | grep '[0-9\.]\+G'"
 alias tmux="tmux -u"
-alias tmuxdev="tmux start-server && tmux attach"
+alias tmuxdev="tmux -u -2 attach-session -d"
 alias battery="pmset -g batt | egrep \"([0-9]+\%).*\" -o --colour=auto | cut -f1 -d';'"
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
 

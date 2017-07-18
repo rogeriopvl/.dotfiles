@@ -15,10 +15,14 @@
     prompt = false
     path = vim
 [alias]
-    lg = log --graph --oneline --decorate
+    graph = log --graph --all --decorate --stat --date=iso
     plog = log HEAD --pretty=format:%s
     st = status -sb
     rrh = pull --rebase origin HEAD
     prh = push origin HEAD
+    pullrom = pull --rebase origin master
+    scores = shortlog -sn --all --no-merges
+    recap = log --all --oneline --no-merges --author=rogeriopvl@gmail.com
+    today = log --since=00:00:00 --all --no-merges --oneline --author=rogeriopvl@gmail.com
 [init]
     templatedir = ~/.dotfiles/git-templates

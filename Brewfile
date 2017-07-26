@@ -49,6 +49,7 @@ cask 'postman'
 cask 'sonos'
 cask 'webtorrent'
 cask 'visual-studio-code'
+cask 'recordit'
 
 # MAC APP STORE APPS
 mas 'Airmail 3', id: 918858936

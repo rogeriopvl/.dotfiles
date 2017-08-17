@@ -1,7 +1,7 @@
 # all paths and envs here!
 
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-export PATH="/usr/local/share/npm/bin:/Users/rogeriopvl/bin:/Users/rogeriopvl/.gocode/bin:$PATH"
+export PATH="/usr/local/share/npm/bin:/Users/rogeriopvl/bin:/Users/rogeriopvl/.gocode/bin:/Users/rogeriopvl/Library/Python/2.7/bin:$PATH"
 
 export EDITOR=/usr/bin/vim
 

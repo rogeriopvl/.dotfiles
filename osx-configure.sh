@@ -26,3 +26,6 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 
 # disable automatically rearrange spaces based on recent use
 defaults write com.apple.dock mru-spaces -bool false
+
+# enable key repeat in vscode
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false

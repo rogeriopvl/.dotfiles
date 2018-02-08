@@ -22,10 +22,9 @@ brew 'rbenv'
 brew 'nmap'
 brew 'reattach-to-user-namespace'
 brew 'unrar'
-brew 'nave'
 brew 'hub'
 brew 'forego'
-brew 'heroku'
+brew 'nvm'
 brew 'neovim/neovim/neovim'
 
 # CASKS (GUI APPS)

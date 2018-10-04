@@ -26,3 +26,5 @@
     today = log --since=00:00:00 --all --no-merges --oneline --author=rogeriopvl@gmail.com
 [init]
     templatedir = ~/.dotfiles/git-templates
+[github]
+	user = rogeriopvl

@@ -1,6 +1,7 @@
 cask_args appdir: '/Applications'
 tap 'caskroom/cask'
 tap 'caskroom/versions'
+tap 'caskroom/fonts'
 tap 'telemachus/brew', 'https://telemachus@bitbucket.org/telemachus/brew.git'
 tap 'homebrew/core'
 tap 'homebrew/versions'
@@ -11,6 +12,7 @@ brew 'zsh'
 brew 'autojump'
 brew 'wget'
 brew 'the_silver_searcher'
+brew 'font-source-code-pro'
 brew 'python'
 brew 'vim'
 brew 'macvim'
@@ -26,6 +28,7 @@ brew 'hub'
 brew 'forego'
 brew 'nvm'
 brew 'neovim/neovim/neovim'
+brew 'fzf'
 
 # CASKS (GUI APPS)
 

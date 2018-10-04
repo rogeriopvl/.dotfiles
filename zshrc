@@ -39,15 +39,15 @@ DISABLE_AUTO_TITLE=true
 ## Programs
 
 # needed because of ruby yaml and stuff
+alias vim="nvim"
 alias jekyll="LANG=en_US.UTF-8 jekyll"
-alias calibreserver="sudo /Applications/calibre.app/Contents/MacOS/calibre-server -p 443"
 alias vlc=/Applications/VLC.app/Contents/MacOS/VLC
-alias ffoxdev="/Applications/Firefox.app/Contents/MacOS/firefox-bin -no-remote -P dev"
 alias dug="du -h . | grep '[0-9\.]\+G'"
 alias tmux="tmux -u"
 alias tmuxdev="tmux -u -2 attach-session -d"
 alias battery="pmset -g batt | egrep \"([0-9]+\%).*\" -o --colour=auto | cut -f1 -d';'"
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
+alias emulator="/Users/rogeriopvl/Library/Android/sdk/emulator/emulator -avd Nexus_5X_API_28_x86"
 
 ## Utilities
 
@@ -63,15 +63,6 @@ precmd() {
     echo -ne "\e]1;${PWD##*/}\a"
 }
 
-# checks if VIM is running in the current tty background
-function is_vim_bg {
-    isbg=$(ps | grep `tty | sed -e 's|/dev/||g'` | grep -i vim | wc -l)
-
-    if [ $isbg -gt 0 ] ; then
-        echo "\e[0;31m❐ VIM\e[m "
-    fi
-}
-
 function rtmp_open() {
     rtmpdump -r $1 --quiet | /Applications/VLC.app/Contents/MacOS/VLC fd://0 --playlist-autostart
 }
@@ -84,13 +75,6 @@ function loc() {
 function checkout-pr() {
     git fetch origin refs/pull/$1/head:PR$1
 }
-
-# TODO!!!!!!!!!!!!!!!!!
-# function websaver() {
-#     if [ "$1" = "add" ]; then
-#         ln -s "/Users/rogeriopvl/.websavers/"$2 "Users/rogeriopvl/Library/Screen Savers/Web.saver/Contents/Resources/"$2
-#     fi
-# }
 
 # toggle bluetooth on/off
 function bluetooth {
@@ -119,10 +103,6 @@ function hide_hidden_files {
     killall Finder
 }
 
-function firefox_extdev {
-    /Applications/Firefox.app/Contents/MacOS/firefox-bin -P extdev
-}
-
 function wifi_name {
     /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'
 }
@@ -134,17 +114,16 @@ function wifi_pass() {
 # for autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 export ANDROID_HOME=/usr/local/opt/android-sdk
-
-export PROMPT="$(is_vim_bg)$PROMPT"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export EDITOR=/usr/local/bin/vim
+export EDITOR=/usr/local/bin/nvim
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# for FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

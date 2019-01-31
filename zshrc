@@ -23,7 +23,10 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git git-flow)
 
-source $ZSH/oh-my-zsh.sh
+# to allow macvim to have a proper prompt
+if [ ! $TERM = dumb ]; then
+    source $ZSH/oh-my-zsh.sh
+fi
 unsetopt correct_all
 
 # Customize to your needs...
@@ -31,8 +34,8 @@ unsetopt correct_all
 # to avoid tmux losing its window names
 DISABLE_AUTO_TITLE=true
 
-# env variables for cli tools
-# source ~/.cli_env
+# load tokens n stuff
+source ~/.secretsenv
 
 # ALIAS
 

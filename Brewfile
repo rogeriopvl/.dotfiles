@@ -36,6 +36,7 @@ cask 'alfred'
 cask 'google-chrome'
 cask 'google-chrome-canary'
 cask 'firefox'
+cask 'firefox-developer-edition'
 cask 'iterm2'
 cask 'moom'
 cask 'dash'
@@ -53,6 +54,7 @@ cask 'sonos'
 cask 'webtorrent'
 cask 'visual-studio-code'
 cask 'recordit'
+cask 'font-source-code-pro'
 
 # MAC APP STORE APPS
 mas 'Airmail 3', id: 918858936

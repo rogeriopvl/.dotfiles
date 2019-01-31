@@ -8,5 +8,3 @@ export REACT_EDITOR=/usr/local/bin/code
 
 # for GOLANG external modules
 export GOPATH=/Users/rogeriopvl/.gocode
-#
-# export PATH="$(brew --prefix php54)/bin:$PATH"

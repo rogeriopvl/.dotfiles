@@ -5,6 +5,7 @@
 [user]
     name = rogeriopvl
     email = rogeriopvl@gmail.com
+    signingkey = 5B0DFC3D5B257E52
 [core]
     excludesfile = /Users/rogeriopvl/.gitignore_global
     editor = /usr/local/bin/nvim
@@ -28,3 +29,5 @@
     templatedir = ~/.dotfiles/git-templates
 [github]
 	user = rogeriopvl
+[commit]
+	gpgsign = true

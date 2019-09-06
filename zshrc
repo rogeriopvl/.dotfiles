@@ -42,7 +42,6 @@ source ~/.secretsenv
 ## Programs
 
 # needed because of ruby yaml and stuff
-alias vim="nvim"
 alias jekyll="LANG=en_US.UTF-8 jekyll"
 alias vlc=/Applications/VLC.app/Contents/MacOS/VLC
 alias dug="du -h . | grep '[0-9\.]\+G'"

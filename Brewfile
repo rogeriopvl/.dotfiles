@@ -5,7 +5,6 @@ tap 'caskroom/fonts'
 tap 'telemachus/brew', 'https://telemachus@bitbucket.org/telemachus/brew.git'
 tap 'homebrew/core'
 tap 'homebrew/versions'
-tap 'neovim/neovim'
 
 brew 'mas'
 brew 'zsh'
@@ -27,7 +26,7 @@ brew 'unrar'
 brew 'hub'
 brew 'forego'
 brew 'nvm'
-brew 'neovim/neovim/neovim'
+brew 'neovim'
 brew 'fzf'
 
 # CASKS (GUI APPS)
@@ -55,6 +54,8 @@ cask 'webtorrent'
 cask 'visual-studio-code'
 cask 'recordit'
 cask 'font-source-code-pro'
+cask 'krisp'
+cask 'gpg-suite'
 
 # MAC APP STORE APPS
 mas 'Airmail 3', id: 918858936

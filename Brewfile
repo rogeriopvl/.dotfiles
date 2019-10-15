@@ -11,7 +11,6 @@ brew 'zsh'
 brew 'autojump'
 brew 'wget'
 brew 'the_silver_searcher'
-brew 'font-source-code-pro'
 brew 'python'
 brew 'vim'
 brew 'macvim'
@@ -24,10 +23,13 @@ brew 'nmap'
 brew 'reattach-to-user-namespace'
 brew 'unrar'
 brew 'hub'
-brew 'forego'
 brew 'nvm'
 brew 'neovim'
 brew 'fzf'
+brew 'awscli'
+brew 'git-flow'
+brew 'terraform'
+brew 'terragrunt'
 
 # CASKS (GUI APPS)
 
@@ -56,6 +58,7 @@ cask 'recordit'
 cask 'font-source-code-pro'
 cask 'krisp'
 cask 'gpg-suite'
+cask 'notion'
 
 # MAC APP STORE APPS
 mas 'Airmail 3', id: 918858936

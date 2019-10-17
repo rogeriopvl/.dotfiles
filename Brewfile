@@ -1,10 +1,10 @@
 cask_args appdir: '/Applications'
-tap 'caskroom/cask'
-tap 'caskroom/versions'
-tap 'caskroom/fonts'
+tap 'homebrew/cask'
+tap 'homebrew/cask-versions'
+tap 'homebrew/cask-drivers'
+tap 'homebrew/cask-fonts'
 tap 'telemachus/brew', 'https://telemachus@bitbucket.org/telemachus/brew.git'
 tap 'homebrew/core'
-tap 'homebrew/versions'
 
 brew 'mas'
 brew 'zsh'
@@ -59,6 +59,7 @@ cask 'font-source-code-pro'
 cask 'krisp'
 cask 'gpg-suite'
 cask 'notion'
+cask 'docker'
 
 # MAC APP STORE APPS
 mas 'Airmail 3', id: 918858936

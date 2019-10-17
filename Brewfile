@@ -29,6 +29,7 @@ brew 'awscli'
 brew 'git-flow'
 brew 'terraform'
 brew 'terragrunt'
+brew 'Schniz/tap/fnm'
 
 # CASKS (GUI APPS)
 

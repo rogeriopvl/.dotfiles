@@ -116,17 +116,14 @@ function wifi_pass() {
 # for autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-export ANDROID_HOME=/usr/local/opt/android-sdk
-
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 export EDITOR=/usr/local/bin/nvim
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # for FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# fnm
+eval "$(fnm env --multi)"

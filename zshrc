@@ -58,6 +58,8 @@ alias sniff="sudo ngrep -W byline -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
 alias remove_context_dups="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain system -domain user"
 
 
+alias python="python3"
+
 # FUNCTIONS
 
 precmd() {
@@ -68,7 +70,6 @@ precmd() {
 function rtmp_open() {
     rtmpdump -r $1 --quiet | /Applications/VLC.app/Contents/MacOS/VLC fd://0 --playlist-autostart
 }
-
 # count the lines of code from a given file extension in the current folder and recursively
 function loc() {
     find . -name *.$1 | xargs wc -l
@@ -127,3 +128,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # fnm
 eval "$(fnm env --multi)"
+
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+--color=dark
+--color=fg:-1,bg:-1,hl:#5fff87,fg+:-1,bg+:-1,hl+:#ffaf5f
+--color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7
+'

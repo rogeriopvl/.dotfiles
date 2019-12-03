@@ -32,6 +32,7 @@ brew 'git-flow'
 brew 'terraform'
 brew 'terragrunt'
 brew 'Schniz/tap/fnm'
+brew 'todo-txt'
 
 # CASKS (GUI APPS)
 

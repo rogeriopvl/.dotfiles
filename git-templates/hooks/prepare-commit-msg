@@ -37,7 +37,7 @@ if [[ $firstLine == \#* ]]; then
 # - test: for adding missing tests
 # - chore: for relases, dependencies, stuff
 #
-    " >> .prepare-commit-msg-temp
+">>.prepare-commit-msg-temp
     { cat .prepare-commit-msg-temp; cat $1; } > .prepare-commit-msg-temp2
     cat .prepare-commit-msg-temp2 > $1
     rm .prepare-commit-msg-temp .prepare-commit-msg-temp2

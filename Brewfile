@@ -33,6 +33,8 @@ brew 'terraform'
 brew 'terragrunt'
 brew 'Schniz/tap/fnm'
 brew 'todo-txt'
+brew 'awslogs'
+brew 'jq'
 
 # CASKS (GUI APPS)
 

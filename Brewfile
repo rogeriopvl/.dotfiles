@@ -3,7 +3,6 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-versions'
 tap 'homebrew/cask-drivers'
 tap 'homebrew/cask-fonts'
-tap 'telemachus/brew', 'https://telemachus@bitbucket.org/telemachus/brew.git'
 tap 'homebrew/core'
 
 brew 'mas'
@@ -25,12 +24,12 @@ brew 'nmap'
 brew 'reattach-to-user-namespace'
 brew 'unrar'
 brew 'hub'
+brew 'gh'
 brew 'neovim'
 brew 'fzf'
 brew 'awscli'
 brew 'git-flow'
 brew 'terraform'
-brew 'terragrunt'
 brew 'Schniz/tap/fnm'
 brew 'todo-txt'
 brew 'awslogs'
@@ -55,7 +54,7 @@ cask 'coconutbattery'
 cask 'skype'
 cask 'vlc'
 cask 'cyberduck'
-cask 'postman'
+cask 'insomnia'
 cask 'sonos'
 cask 'webtorrent'
 cask 'visual-studio-code'
@@ -65,11 +64,14 @@ cask 'krisp'
 cask 'gpg-suite'
 cask 'notion'
 cask 'docker'
+cask 'miro'
+cask 'hey'
+cask 'brave-browser'
 
 # MAC APP STORE APPS
-mas 'Airmail 3', id: 918858936
+# mas 'Airmail 3', id: 918858936
 mas 'Keynote', id: 409183694
 mas 'Pixelmator', id: 407963104
-mas 'Skitch', id: 425955336
-mas 'TweetDeck', id: 485812721
-mas 'Twitter', id: 409789998
+# mas 'Skitch', id: 425955336
+# mas 'TweetDeck', id: 485812721
+# mas 'Twitter', id: 409789998

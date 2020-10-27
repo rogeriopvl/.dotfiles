@@ -46,11 +46,11 @@ alias jekyll="LANG=en_US.UTF-8 jekyll"
 alias vlc=/Applications/VLC.app/Contents/MacOS/VLC
 alias dug="du -h . | grep '[0-9\.]\+G'"
 alias tmux="tmux -u"
-alias tmuxdev="tmux -u -2 attach-session -d"
 alias battery="pmset -g batt | egrep \"([0-9]+\%).*\" -o --colour=auto | cut -f1 -d';'"
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
 alias emulator="/Users/rogeriopvl/Library/Android/sdk/emulator/emulator -avd Nexus_5X_API_28_x86"
 alias todo="todo.sh"
+alias mux="tmuxinator"
 
 ## Utilities
 

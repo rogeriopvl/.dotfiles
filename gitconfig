@@ -4,8 +4,8 @@
     branch = auto
 [user]
     name = rogeriopvl
-    email = rogeriopvl@gmail.com
-    signingkey = 5B0DFC3D5B257E52
+    email = rogerio@hey.com
+    signingkey = 7727F833C10EDE98
 [core]
     excludesfile = /Users/rogeriopvl/.gitignore_global
     editor = /usr/local/bin/nvim
@@ -23,8 +23,8 @@
     prh = push origin HEAD
     pullrom = pull --rebase origin master
     scores = shortlog -sn --all --no-merges
-    recap = log --all --oneline --no-merges --author=rogeriopvl@gmail.com
-    today = log --since=00:00:00 --all --no-merges --oneline --author=rogeriopvl@gmail.com
+    recap = log --all --oneline --no-merges --author=rogerio@hey.com
+    today = log --since=00:00:00 --all --no-merges --oneline --author=rogerio@hey.com
 [init]
     templatedir = ~/.dotfiles/git-templates
 [github]

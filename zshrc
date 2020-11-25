@@ -128,7 +128,7 @@ export EDITOR=/usr/local/bin/nvim
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # fnm
-eval "$(fnm env --multi)"
+eval "$(fnm env)"
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --color=dark

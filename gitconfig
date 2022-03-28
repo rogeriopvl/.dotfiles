@@ -5,10 +5,10 @@
 [user]
     name = rogeriopvl
     email = rogerio@hey.com
-    signingkey = 7727F833C10EDE98
+    signingkey = 078A8C2F99202379
 [core]
     excludesfile = /Users/rogeriopvl/.gitignore_global
-    editor = /usr/local/bin/nvim
+    editor = /opt/homebrew/bin/nvim
 [merge]
     tool = vimdiff
     conflictstyle = diff3

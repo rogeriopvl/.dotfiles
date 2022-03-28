@@ -121,7 +121,7 @@ function wifi_pass() {
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export EDITOR=/usr/local/bin/nvim
+export EDITOR=/opt/homebrew/bin/nvim
 
 # for FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

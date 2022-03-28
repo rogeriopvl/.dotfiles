@@ -28,12 +28,11 @@ brew 'gh'
 brew 'neovim'
 brew 'fzf'
 brew 'awscli'
-brew 'git-flow'
 brew 'terraform'
 brew 'Schniz/tap/fnm'
-brew 'todo-txt'
 brew 'awslogs'
 brew 'jq'
+brew 'tmuxinator'
 
 # CASKS (GUI APPS)
 
@@ -44,9 +43,8 @@ cask 'firefox'
 cask 'firefox-developer-edition'
 cask 'iterm2'
 cask 'moom'
-cask 'dash'
+# cask 'dash'
 cask 'slack'
-cask 'telegram-desktop'
 cask 'spotify'
 cask 'keybase'
 cask 'ngrok'
@@ -67,11 +65,8 @@ cask 'docker'
 cask 'miro'
 cask 'hey'
 cask 'brave-browser'
+cask 'signal'
 
 # MAC APP STORE APPS
-# mas 'Airmail 3', id: 918858936
 mas 'Keynote', id: 409183694
 mas 'Pixelmator', id: 407963104
-# mas 'Skitch', id: 425955336
-# mas 'TweetDeck', id: 485812721
-# mas 'Twitter', id: 409789998

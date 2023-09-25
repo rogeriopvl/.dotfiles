@@ -51,6 +51,7 @@ alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/C
 alias emulator="/Users/rogeriopvl/Library/Android/sdk/emulator/emulator -avd Nexus_5X_API_28_x86"
 alias todo="todo.sh"
 alias mux="tmuxinator"
+alias restart-audio="sudo launchctl stop com.apple.audio.coreaudiod && sudo launchctl start com.apple.audio.coreaudiod"
 
 ## Utilities
 

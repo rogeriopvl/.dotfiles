@@ -8,3 +8,11 @@ ln -s .dotfiles/gitignore_global $HOME/.gitignore_global
 
 # create the empty file just to avoid errors
 touch $HOME/.secretsenv
+
+# NEOVIM
+if [ ! -d "$HOME/.config" ]; then
+	echo "Directory $HOME/.config does not exist. Creating it..."
+	mkdir "$HOME/.config"
+fi
+
+ln -s .dotfiles/nvim $HOME/.config/nvim

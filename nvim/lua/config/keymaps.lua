@@ -11,3 +11,6 @@ vim.keymap.set("n", "<C-h>", ":TmuxNavigateLeft<cr>", { silent = true, noremap =
 vim.keymap.set("n", "<C-l>", ":TmuxNavigateRight<cr>", { silent = true, noremap = true })
 vim.keymap.set("n", "<C-j>", ":TmuxNavigateDown<cr>", { silent = true, noremap = true })
 vim.keymap.set("n", "<C-k>", ":TmuxNavigateUp<cr>", { silent = true, noremap = true })
+
+-- show diagnostics in popup
+vim.keymap.set("n", "<C-e>", ":lua vim.diagnostic.open_float()<cr>", { silent = true, noremap = true })

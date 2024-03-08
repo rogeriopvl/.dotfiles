@@ -1,1 +1,6 @@
-return { "f-person/git-blame.nvim" }
+return {
+  "f-person/git-blame.nvim",
+  opts = {
+    ignored_filetypes = { "norg" },
+  },
+}

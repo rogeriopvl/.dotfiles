@@ -6,7 +6,7 @@ return {
     -- tag = "*",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
-      require("neorg").setup {
+      require("neorg").setup({
         load = {
           ["core.defaults"] = {}, -- Loads default behaviour
           ["core.concealer"] = {}, -- Adds pretty icons to your documents
@@ -15,17 +15,17 @@ return {
               workspaces = {
                 notes = "~/notes",
               },
-              default_workspace = "notes"
+              default_workspace = "notes",
             },
           },
           ["core.journal"] = {
             config = {
-              strategy = "flat"
+              strategy = "flat",
             },
           },
           ["core.keybinds"] = {},
         },
-      }
+      })
     end,
   },
 }

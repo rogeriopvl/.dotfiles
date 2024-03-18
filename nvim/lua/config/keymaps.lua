@@ -15,6 +15,9 @@ vim.keymap.set("n", "<C-k>", ":TmuxNavigateUp<cr>", { silent = true, noremap = t
 -- show diagnostics in popup
 vim.keymap.set("n", "<C-e>", ":lua vim.diagnostic.open_float()<cr>", { silent = true, noremap = true })
 
--- Neorg
-vim.keymap.set("n", "<leader>ns", ":Neorg workspace notes<cr>", { silent = true, noremap = true })
-vim.keymap.set("n", "<leader>nq", ":Neorg return<cr>", { silent = true, noremap = true })
+-- Obsidian
+vim.keymap.set("n", "<leader>obt", ":ObsidianToday<cr>", { silent = true, noremap = true })
+vim.keymap.set("n", "<leader>oby", ":ObsidianYesterday<cr>", { silent = true, noremap = true })
+vim.keymap.set("n", "<leader>obm", ":ObsidianTomorrow<cr>", { silent = true, noremap = true })
+vim.keymap.set("n", "<leader>obd", ":ObsidianDailies<cr>", { silent = true, noremap = true })
+vim.keymap.set("n", "<leader>obs", ":ObsidianSearch<cr>", { silent = true, noremap = true })

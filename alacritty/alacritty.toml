@@ -1,0 +1,62 @@
+[window]
+dynamic_padding = true
+decorations = "None"
+
+[font]
+size = 13
+
+[font.normal]
+family = "FiraCode Nerd Font Mono"
+style = "Retina"
+
+[font.bold]
+family = "FiraCode Nerd Font Mono"
+style = "Bold"
+
+[font.italic]
+family = "FiraCode Nerd Font Mono"
+style = "Italic"
+
+[font.bold_italic]
+family = "FiraCode Nerd Font Mono"
+style = "Bold Italic"
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "0x444a73"
+blue = "0x82aaff"
+cyan = "0x86e1fc"
+green = "0xc3e88d"
+magenta = "0xc099ff"
+red = "0xff757f"
+white = "0xc8d3f5"
+yellow = "0xffc777"
+
+[colors.normal]
+black = "0x1b1d2b"
+blue = "0x82aaff"
+cyan = "0x86e1fc"
+green = "0xc3e88d"
+magenta = "0xc099ff"
+red = "0xff757f"
+white = "0x828bb8"
+yellow = "0xffc777"
+
+[colors.primary]
+background = "0x222436"
+foreground = "0xc8d3f5"
+
+[[colors.indexed_colors]]
+color = "0xff966c"
+index = 16
+
+[[colors.indexed_colors]]
+color = "0xc53b53"
+index = 17
+
+[[keyboard.bindings]]
+action = "ToggleSimpleFullscreen"
+key = "Return"
+mods = "Command"

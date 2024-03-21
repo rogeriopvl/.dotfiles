@@ -29,3 +29,7 @@ ln -s .dotfiles/nvim $HOME/.config/nvim
 ln -s .dotfiles/yabai $HOME/.config/yabai
 ln -s .dotfiles/skhd $HOME/.config/skhd
 echo "✅ dotfiles"
+
+echo "⏳installing brewfile packages..."
+brew bundle --file="$HOME/.dotfiles/Brewfile" install
+echo "✅ brewfile packages"

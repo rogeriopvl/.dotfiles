@@ -74,19 +74,8 @@ if [[ $(uname) == "Darwin" ]]; then
   }
 fi
 
-precmd() {
-    # sets the tab title to current dir
-    echo -ne "\e]1;${PWD##*/}\a"
-}
-
-# count the lines of code from a given file extension in the current folder and recursively
-function loc() {
-    find . -name *.$1 | xargs wc -l
-}
-
-
 # autojump <3
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+[[ -s $(brew --prefix)/etc/profile.d/autojump.zsh ]] && . $(brew --prefix)/etc/profile.d/autojump.zsh
 
 # rbenv (TODO: do I still need this?)
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

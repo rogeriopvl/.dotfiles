@@ -1,35 +1,16 @@
-# Path to your oh-my-zsh configuration.
+# path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
-
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
-
-# Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow)
+plugins=(git tmux)
 
-# to allow macvim to have a proper prompt
-if [ ! $TERM = dumb ]; then
-    source $ZSH/oh-my-zsh.sh
-fi
+source $ZSH/oh-my-zsh.sh
+
+# disable auto-correction
 unsetopt correct_all
-
-# Customize to your needs...
 
 # to avoid tmux losing its window names
 DISABLE_AUTO_TITLE=true
@@ -39,26 +20,19 @@ source ~/.secretsenv
 
 # ALIAS
 
-## Programs
-
-# needed because of ruby yaml and stuff
-alias jekyll="LANG=en_US.UTF-8 jekyll"
 alias vlc=/Applications/VLC.app/Contents/MacOS/VLC
-alias dug="du -h . | grep '[0-9\.]\+G'"
-alias tmux="tmux -u"
 alias battery="pmset -g batt | egrep \"([0-9]+\%).*\" -o --colour=auto | cut -f1 -d';'"
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
-alias emulator="/Users/rogeriopvl/Library/Android/sdk/emulator/emulator -avd Nexus_5X_API_28_x86"
-alias todo="todo.sh"
-alias mux="tmuxinator"
 alias restart-audio="sudo launchctl stop com.apple.audio.coreaudiod && sudo launchctl start com.apple.audio.coreaudiod"
 
 ## Utilities
 
 alias temps="tempmonitor -ds -c -a -l"
 alias sniff="sudo ngrep -W byline -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
-alias remove_context_dups="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain system -domain user"
 
+alias tmux="tmux -u"
+alias tm="tmux -u"
+alias tma="tmux -u attach"
 
 alias python="python3"
 
@@ -75,15 +49,6 @@ function rtmp_open() {
 # count the lines of code from a given file extension in the current folder and recursively
 function loc() {
     find . -name *.$1 | xargs wc -l
-}
-
-function checkout-pr() {
-    git fetch origin refs/pull/$1/head:PR$1
-}
-
-# toggle bluetooth on/off
-function bluetooth {
-    osascript -e 'tell application "System Events" to tell process "SystemUIServer" to tell (menu bar item 1 of menu bar 1 whose description is "bluetooth") to {click, click (menu item 2 of menu 1)}'
 }
 
 # show and hide the desktop icons (for presentations)
@@ -116,13 +81,12 @@ function wifi_pass() {
     security find-generic-password -D "AirPort network password" -a $(wifi_name) -gw
 }
 
-# for autojump
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
-
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
 export EDITOR=/opt/homebrew/bin/nvim
+
+# for autojump
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 # for FZF
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

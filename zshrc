@@ -20,14 +20,14 @@ source ~/.secretsenv
 
 # ALIAS
 
-alias vlc=/Applications/VLC.app/Contents/MacOS/VLC
-alias battery="pmset -g batt | egrep \"([0-9]+\%).*\" -o --colour=auto | cut -f1 -d';'"
-alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
-alias restart-audio="sudo launchctl stop com.apple.audio.coreaudiod && sudo launchctl start com.apple.audio.coreaudiod"
+if [[ $(uname) == "Darwin" ]]; then
+  alias vlc=/Applications/VLC.app/Contents/MacOS/VLC
+  alias battery="pmset -g batt | egrep \"([0-9]+\%).*\" -o --colour=auto | cut -f1 -d';'"
+  alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
+  alias restart-audio="sudo launchctl stop com.apple.audio.coreaudiod && sudo launchctl start com.apple.audio.coreaudiod"
+  alias temps="tempmonitor -ds -c -a -l"
+fi
 
-## Utilities
-
-alias temps="tempmonitor -ds -c -a -l"
 alias sniff="sudo ngrep -W byline -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
 
 alias tmux="tmux -u"
@@ -38,67 +38,64 @@ alias python="python3"
 
 # FUNCTIONS
 
+if [[ $(uname) == "Darwin" ]]; then
+  # show and hide the desktop icons (for presentations)
+  function hide_desktop {
+    defaults write com.apple.finder CreateDesktop -bool false
+    killall Finder
+  }
+
+  function show_desktop {
+    defaults write com.apple.finder CreateDesktop -bool true
+    killall Finder
+  }
+
+  # show and hide the hidden files
+  function show_hidden_files {
+    defaults write com.apple.finder AppleShowAllFiles TRUE
+    killall Finder
+  }
+
+  function hide_hidden_files {
+    defaults write com.apple.finder AppleShowAllFiles FALSE
+    killall Finder
+  }
+
+  function wifi_name {
+    /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'
+  }
+
+  function wifi_pass() {
+    security find-generic-password -D "AirPort network password" -a $(wifi_name) -gw
+  }
+
+  function rtmp_open() {
+      rtmpdump -r $1 --quiet | /Applications/VLC.app/Contents/MacOS/VLC fd://0 --playlist-autostart
+  }
+fi
+
 precmd() {
     # sets the tab title to current dir
     echo -ne "\e]1;${PWD##*/}\a"
 }
 
-function rtmp_open() {
-    rtmpdump -r $1 --quiet | /Applications/VLC.app/Contents/MacOS/VLC fd://0 --playlist-autostart
-}
 # count the lines of code from a given file extension in the current folder and recursively
 function loc() {
     find . -name *.$1 | xargs wc -l
 }
 
-# show and hide the desktop icons (for presentations)
-function hide_desktop {
-    defaults write com.apple.finder CreateDesktop -bool false
-    killall Finder
-}
 
-function show_desktop {
-    defaults write com.apple.finder CreateDesktop -bool true
-    killall Finder
-}
-
-# show and hide the hidden files
-function show_hidden_files {
-    defaults write com.apple.finder AppleShowAllFiles TRUE
-    killall Finder
-}
-
-function hide_hidden_files {
-    defaults write com.apple.finder AppleShowAllFiles FALSE
-    killall Finder
-}
-
-function wifi_name {
-    /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'
-}
-
-function wifi_pass() {
-    security find-generic-password -D "AirPort network password" -a $(wifi_name) -gw
-}
-
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export EDITOR=/opt/homebrew/bin/nvim
-
-# for autojump
+# autojump <3
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-# for FZF
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# rbenv (TODO: do I still need this?)
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# for shell history with FZF
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# atuin (another history tool I'm currently trying out)
 eval "$(atuin init zsh)"
 
-# fnm
+# fnm (node version manager)
 eval "$(fnm env)"
-
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
---color=dark
---color=fg:-1,bg:-1,hl:#5fff87,fg+:-1,bg+:-1,hl+:#ffaf5f
---color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7
-'

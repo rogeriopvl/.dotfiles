@@ -1,10 +1,7 @@
-# path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git tmux)
 
 source $ZSH/oh-my-zsh.sh
@@ -14,9 +11,6 @@ unsetopt correct_all
 
 # to avoid tmux losing its window names
 DISABLE_AUTO_TITLE=true
-
-# load tokens n stuff
-source ~/.secretsenv
 
 # ALIAS
 
@@ -74,8 +68,12 @@ if [[ $(uname) == "Darwin" ]]; then
   }
 fi
 
-# autojump <3
-[[ -s $(brew --prefix)/etc/profile.d/autojump.zsh ]] && . $(brew --prefix)/etc/profile.d/autojump.zsh
+# autojump
+if [[ $(uname) == "Darwin" ]]; then
+  . $(brew --prefix)/etc/profile.d/autojump.zsh
+else
+  . /usr/share/autojump/autojump.zsh
+fi
 
 # rbenv (TODO: do I still need this?)
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

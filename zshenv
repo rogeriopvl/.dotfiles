@@ -27,3 +27,6 @@ if [[ $(uname) == "Linux" ]]; then
     # homebrew linux
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
+
+# load tokens n stuff
+source $HOME/.secretsenv

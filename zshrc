@@ -68,7 +68,7 @@ fi
 
 # autojump
 if [[ $(uname) == "Darwin" ]]; then
-  . $(brew --prefix)/etc/profile.d/autojump.zsh
+  . $(brew --prefix)/etc/profile.d/autojump.sh
 else
   . /usr/share/autojump/autojump.zsh
 fi

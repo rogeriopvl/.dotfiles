@@ -30,3 +30,10 @@ fi
 
 # load tokens n stuff
 source $HOME/.secretsenv
+
+export TMUX_SESSIONIZER_DIRS=(
+  "$HOME/src/projects"
+  "$HOME/src/projects/learn"
+  "$HOME/src/projects/httpcats"
+  "$HOME/src/projects/studentfinance"
+)

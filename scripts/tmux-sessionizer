@@ -1,9 +1,14 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
+
+if [[ -z "$TMUX_SESSIONIZER_DIRS" ]]; then
+  echo "error: TMUX_SESSIONIZER_DIRS env var is not defined!"
+  exit 1
+fi
 
 if [[ $# -eq 1 ]]; then
 	selected=$1
 else
-	selected=$(find ~/src/projects ~/src/projects/studentfinance -mindepth 1 -maxdepth 1 -type d | fzf)
+	selected=$(find "${TMUX_SESSIONIZER_DIRS[@]}" -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then

@@ -22,8 +22,6 @@ if [[ $(uname) == "Darwin" ]]; then
   alias temps="tempmonitor -ds -c -a -l"
 fi
 
-alias sniff="sudo ngrep -W byline -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
-
 alias tmux="tmux -u"
 alias tm="tmux -u"
 alias tma="tmux -u attach"

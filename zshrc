@@ -22,7 +22,6 @@ if [[ $(uname) == "Darwin" ]]; then
   alias temps="tempmonitor -ds -c -a -l"
 fi
 
-alias tmux="tmux -u"
 alias tm="tmux -u"
 alias tma="tmux -u attach"
 

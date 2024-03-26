@@ -16,6 +16,8 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.formatting.conform" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
+    { import = "lazyvim.plugins.extras.lang.go" },
+    { import = "lazyvim.plugins.extras.lang.rust" },
     { import = "lazyvim.plugins.extras.coding.copilot" },
     { import = "lazyvim.plugins.extras.ui.alpha" },
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },

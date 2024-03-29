@@ -5,7 +5,7 @@
 vim.opt.relativenumber = false
 vim.opt.colorcolumn = "80"
 vim.opt.wrap = true
-vim.opt.textwidth = 85
+vim.opt.textwidth = 80
 
 -- disable lsp virtual text (I call it manually)
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(

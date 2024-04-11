@@ -5,7 +5,7 @@
 [user]
     name = rogeriopvl
     email = rogerio@hey.com
-    signingkey = 078A8C2F99202379
+    signingkey = /Users/rogeriopvl/.ssh/id_ed25519
 [core]
     excludesfile = /Users/rogeriopvl/.gitignore_global
     editor = /opt/homebrew/bin/nvim
@@ -30,4 +30,8 @@
 [github]
 	user = rogeriopvl
 [commit]
-	gpgsign = true
+  gpgsign = true
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  allowedSignersFile = /Users/rogeriopvl/.ssh/allowed_signers

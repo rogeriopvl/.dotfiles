@@ -1,4 +1,4 @@
-import = ["~/.config/alacritty/tokyo-night.toml"]
+import = ["~/.config/alacritty/rose-pine-moon.toml"]
 
 [window]
 dynamic_padding = true

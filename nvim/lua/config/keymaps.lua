@@ -21,3 +21,7 @@ vim.keymap.set("n", "<leader>oby", ":ObsidianYesterday<cr>", { silent = true, no
 vim.keymap.set("n", "<leader>obm", ":ObsidianTomorrow<cr>", { silent = true, noremap = true })
 vim.keymap.set("n", "<leader>obd", ":ObsidianDailies<cr>", { silent = true, noremap = true })
 vim.keymap.set("n", "<leader>obs", ":ObsidianSearch<cr>", { silent = true, noremap = true })
+
+-- copilot
+vim.keymap.set("n", "<leader>cpd", ":Copilot disable<cr>", { silent = true, noremap = true })
+vim.keymap.set("n", "<leader>cpe", ":Copilot enable<cr>", { silent = true, noremap = true })

@@ -1,4 +1,4 @@
-import = ["~/.config/alacritty/rose-pine-moon.toml"]
+import = ["~/.config/alacritty/rose-pine.toml"]
 
 [window]
 dynamic_padding = true

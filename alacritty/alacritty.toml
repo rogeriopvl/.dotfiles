@@ -1,5 +1,8 @@
 import = ["~/.config/alacritty/rose-pine.toml"]
 
+[env]
+TERM = "xterm-256color"
+
 [window]
 dynamic_padding = true
 decorations = "None"
@@ -7,21 +10,17 @@ decorations = "None"
 [font]
 size = 13
 
-[font.normal]
-family = "FiraCode Nerd Font Mono"
-style = "Retina"
+normal.family = "FiraCode Nerd Font Mono"
+normal.style = "Retina"
 
-[font.bold]
-family = "FiraCode Nerd Font Mono"
-style = "Bold"
+bold.family = "FiraCode Nerd Font Mono"
+bold.style = "Bold"
 
-[font.italic]
-family = "FiraCode Nerd Font Mono"
-style = "Italic"
+italic.family = "FiraCode Nerd Font Mono"
+italic.style = "Italic"
 
-[font.bold_italic]
-family = "FiraCode Nerd Font Mono"
-style = "Bold Italic"
+bold_italic.family = "FiraCode Nerd Font Mono"
+bold_italic.style = "Bold Italic"
 
 [colors]
 draw_bold_text_with_bright_colors = true

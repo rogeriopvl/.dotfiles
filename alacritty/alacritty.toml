@@ -10,16 +10,16 @@ decorations = "None"
 [font]
 size = 13
 
-normal.family = "FiraCode Nerd Font Mono"
-normal.style = "Retina"
+normal.family = "DejaVuSansM Nerd Font Mono"
+normal.style = "Regular"
 
-bold.family = "FiraCode Nerd Font Mono"
+bold.family = "DejaVuSansM Nerd Font Mono"
 bold.style = "Bold"
 
-italic.family = "FiraCode Nerd Font Mono"
+italic.family = "MesloLGS Nerd Font Mono"
 italic.style = "Italic"
 
-bold_italic.family = "FiraCode Nerd Font Mono"
+bold_italic.family = "MesloLGS Nerd Font Mono"
 bold_italic.style = "Bold Italic"
 
 [colors]

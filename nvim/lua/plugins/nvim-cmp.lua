@@ -38,5 +38,7 @@ return {
       end, { "i", "s" }),
       ["<CR>"] = cmp.config.disable,
     })
+
+    opts.completion = { autocomplete = false }
   end,
 }

@@ -1,8 +1,9 @@
 return {
   "neovim/nvim-lspconfig",
   -- other settings removed for brevity
+  ---@type lspconfig.options
   opts = {
-    ---@type lspconfig.options
+    inlay_hints = { enabled = false },
     servers = {
       eslint = {
         settings = {

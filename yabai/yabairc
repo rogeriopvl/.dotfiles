@@ -32,3 +32,4 @@ yabai -m rule --add app="^Music" space=6
 
 # manage off rules
 yabai -m rule --add app="^Last.fm" manage=off
+yabai -m rule --add app="^Archetype Gojira" manage=off

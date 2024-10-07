@@ -91,5 +91,5 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # atuin (another history tool I'm currently trying out)
 eval "$(atuin init zsh)"
 
-# fnm (node version manager)
-eval "$(fnm env)"
+# mise (manages programming languages versions)
+eval "$(/opt/homebrew/bin/mise activate zsh)"

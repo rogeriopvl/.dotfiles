@@ -82,9 +82,6 @@ else
   . /usr/share/autojump/autojump.zsh
 fi
 
-# rbenv (TODO: do I still need this?)
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 # for shell history with FZF
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -92,4 +89,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 eval "$(atuin init zsh)"
 
 # mise (manages programming languages versions)
-eval "$(/opt/homebrew/bin/mise activate zsh)"
+if [[ $(uname) == "Darwin" ]]; then
+  eval "$(/opt/homebrew/bin/mise activate zsh)"
+else
+  eval "$(/home/linuxbrew/.linuxbrew/bin/mise activate zsh)"
+fi
+

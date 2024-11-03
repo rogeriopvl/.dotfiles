@@ -57,11 +57,11 @@ preset = 'qwerty'
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
 inner.horizontal = 0
-inner.vertical =   0
-outer.left =       0
-outer.bottom =     0
-outer.top =        0
-outer.right =      0
+inner.vertical = 0
+outer.left = 0
+outer.bottom = 0
+outer.top = 0
+outer.right = 0
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -193,7 +193,10 @@ alt-shift-semicolon = 'mode service'
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
-f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
+f = [
+  'layout floating tiling',
+  'mode main',
+] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 
 # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
@@ -206,40 +209,40 @@ alt-shift-l = ['join-with right', 'mode main']
 
 [[on-window-detected]]
 if.app-id = 'org.mozilla.firefox'
-run = "move-node-to-workspace B"
+run = "move-node-to-workspace 1"
 
 [[on-window-detected]]
 if.app-id = 'org.alacritty'
-run = "move-node-to-workspace T"
+run = "move-node-to-workspace 2"
 
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
-run = "move-node-to-workspace T"
-
-[[on-window-detected]]
-if.app-id = 'org.apple.Music'
-run = "move-node-to-workspace M"
-
-[[on-window-detected]]
-if.app-id = 'fm.last.Scrobbler'
-run = "move-node-to-workspace M"
+run = "move-node-to-workspace 2"
 
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
-run = "move-node-to-workspace S"
+run = "move-node-to-workspace 3"
 
 [[on-window-detected]]
 if.app-id = 'com.openai.chat'
-run = "move-node-to-workspace S"
+run = "move-node-to-workspace 3"
 
 [[on-window-detected]]
 if.app-id = 'com.cron.electron'
-run = "move-node-to-workspace Q"
+run = "move-node-to-workspace 4"
 
 [[on-window-detected]]
 if.app-id = 'org.whispersystems.signal-desktop'
-run = "move-node-to-workspace X"
+run = "move-node-to-workspace 5"
 
 [[on-window-detected]]
 if.app-id = 'com.apple.mail'
-run = "move-node-to-workspace X"
+run = "move-node-to-workspace 5"
+
+[[on-window-detected]]
+if.app-id = 'org.apple.Music'
+run = "move-node-to-workspace 6"
+
+[[on-window-detected]]
+if.app-id = 'fm.last.Scrobbler'
+run = "move-node-to-workspace 6"

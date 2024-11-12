@@ -25,6 +25,7 @@
     scores = shortlog -sn --all --no-merges
     recap = log --all --oneline --no-merges --author=rogerio@hey.com
     today = log --since=00:00:00 --all --no-merges --oneline --author=rogerio@hey.com
+    ddiff = -c diff.external=difft diff
 [init]
     templatedir = ~/.dotfiles/git-templates
 [github]

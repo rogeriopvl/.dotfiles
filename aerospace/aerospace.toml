@@ -207,6 +207,9 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
+[workspace-to-monitor-force-assignment]
+X = 'secondary'
+
 [[on-window-detected]]
 if.app-id = 'org.mozilla.firefox'
 run = "move-node-to-workspace 1"

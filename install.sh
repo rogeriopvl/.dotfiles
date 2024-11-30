@@ -20,14 +20,15 @@ ln -s .dotfiles/gitignore_global $HOME/.gitignore_global
 
 # create ~/.config if it doesn't exist
 if [ ! -d "$HOME/.config" ]; then
-	echo "⚠️ directory $HOME/.config does not exist. Creating it..."
-	mkdir "$HOME/.config"
+  echo "⚠️ directory $HOME/.config does not exist. Creating it..."
+  mkdir "$HOME/.config"
 fi
 
 ln -s .dotfiles/alacritty $HOME/.config/alacritty
 ln -s .dotfiles/nvim $HOME/.config/nvim
 ln -s .dotfiles/yabai $HOME/.config/yabai
 ln -s .dotfiles/skhd $HOME/.config/skhd
+ln -s .dotfiles/aerospace $HOME/.config/aerospace
 echo "✅ dotfiles"
 
 echo "⏳installing brewfile packages..."

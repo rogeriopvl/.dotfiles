@@ -10,14 +10,12 @@ In your home folder do:
 
 Then just `ln -s` everything you're interested into your home folder :)
 
-## Caveats
+## Scripts
 
-The `markdownlint.jsonc` file was added because of LazyVim's markdown extras.
-This uses markdownlint to lint markdown files and at least two rules are not
-suitable for code blocks (line-length and no-hard-tabs). The only way I found
-to disable those rules was by creating this config file in my `$HOME` and force
-the plugin to use it (check `nvim/lua/plugins/lint.lua`). I even documented this
-approach on [this LazyVim repo discussion][1] in the hopes that someone will
-challenge it with a cleaner solution.
+There are some scripts in this repo that aim to automate some of the manual
+work. Here's a list and description:
 
-[1]: https://github.com/LazyVim/LazyVim/discussions/2268
+- `install.sh` installs initial dependencies (homebrew and oh-my-zsh) and
+  creates all the symlinks.
+- `osx-configure.sh` for MacOS, configures the OS with some sane (very biased) defaults.
+- `setup-git-signing.zsh` to setup git commit signing with SSH keys.

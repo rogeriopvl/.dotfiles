@@ -1,5 +1,4 @@
 # this script sets up git commit signing using SSH keys
-# it should be run it should be run in last
 
 touch $HOME/.ssh/allowed_signers
 

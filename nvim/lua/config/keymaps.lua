@@ -18,3 +18,9 @@ vim.keymap.set("n", "<C-e>", ":lua vim.diagnostic.open_float()<cr>", { silent = 
 -- copilot
 vim.keymap.set("n", "<leader>cpd", ":Copilot disable<cr>", { silent = true, noremap = true })
 vim.keymap.set("n", "<leader>cpe", ":Copilot enable<cr>", { silent = true, noremap = true })
+
+-- toggle completion for buffer
+vim.keymap.set("n", "<leader>ct", function()
+    vim.b.completion = not vim.b.completion
+    print("Completion " .. (vim.b.completion and "enabled" or "disabled") .. " for buffer")
+end, { silent = false, noremap = true, desc = "Toggle completion for buffer" })

@@ -1,5 +1,10 @@
 #!/bin/bash -e
 
+if [ ! -d "$HOME/.dotfiles/.git" ]; then
+  echo "❌ .dotfiles repo is not installed in the $HOME directory"
+  echo "exiting..."
+fi
+
 # create the empty file just to avoid errors
 touch $HOME/.secretsenv
 
@@ -12,11 +17,11 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 echo "✅ oh-my-zsh"
 
 echo "⏳creating dotfiles symlinks..."
-ln -s .dotfiles/tmux.conf $HOME/.tmux.conf
-ln -s .dotfiles/zshrc $HOME/.zshrc
-ln -s .dotfiles/zshenv $HOME/.zshenv
-ln -s .dotfiles/gitconfig $HOME/.gitconfig
-ln -s .dotfiles/gitignore_global $HOME/.gitignore_global
+ln -s $HOME/.dotfiles/tmux.conf $HOME/.tmux.conf
+ln -s $HOME/.dotfiles/zshrc $HOME/.zshrc
+ln -s $HOME/.dotfiles/zshenv $HOME/.zshenv
+ln -s $HOME/.dotfiles/gitconfig $HOME/.gitconfig
+ln -s $HOME/.dotfiles/gitignore_global $HOME/.gitignore_global
 
 # create ~/.config if it doesn't exist
 if [ ! -d "$HOME/.config" ]; then
@@ -24,11 +29,11 @@ if [ ! -d "$HOME/.config" ]; then
   mkdir "$HOME/.config"
 fi
 
-ln -s .dotfiles/alacritty $HOME/.config/alacritty
-ln -s .dotfiles/nvim $HOME/.config/nvim
-ln -s .dotfiles/yabai $HOME/.config/yabai
-ln -s .dotfiles/skhd $HOME/.config/skhd
-ln -s .dotfiles/aerospace $HOME/.config/aerospace
+ln -s $HOME/.dotfiles/alacritty $HOME/.config/alacritty
+ln -s $HOME/.dotfiles/nvim $HOME/.config/nvim
+ln -s $HOME/.dotfiles/yabai $HOME/.config/yabai
+ln -s $HOME/.dotfiles/skhd $HOME/.config/skhd
+ln -s $HOME/.dotfiles/aerospace $HOME/.config/aerospace
 echo "✅ dotfiles"
 
 echo "⏳installing brewfile packages..."

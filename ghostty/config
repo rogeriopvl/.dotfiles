@@ -1,6 +1,9 @@
-font-family = "JetBrainsMono NFM Regular"
+font-family = JetBrainsMono NFM Regular
 theme = rose-pine
 window-decoration = false
 macos-titlebar-style = hidden
 window-padding-x = 2
 window-padding-y = 2
+
+# optionally load linux specific config if it exists
+config-file = ?linux.config

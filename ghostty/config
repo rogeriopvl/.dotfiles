@@ -1,7 +1,14 @@
 font-family = JetBrainsMono NFM Regular
+
+# disable font programming ligatures
+font-feature = -calt
+
 theme = rose-pine
+
+# remove all window decorations
 window-decoration = false
 macos-titlebar-style = hidden
+
 window-padding-x = 2
 window-padding-y = 2
 

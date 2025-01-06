@@ -7,8 +7,13 @@ return {
     },
     build = "make tiktoken", -- Only on MacOS or Linux
     opts = {
-      model = "claude-3.5-sonnet"
-      -- See Configuration section for options
+      model = "claude-3.5-sonnet",
+      mappings = {
+        reset = {
+          insert = "<C-r>",
+          normal = "<C-r>",
+        },
+      },
     },
     -- See Commands section for default commands if you want to lazy load on them
   },

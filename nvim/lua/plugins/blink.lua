@@ -2,8 +2,7 @@ return {
   "saghen/blink.cmp",
   opts = {
     keymap = {
-      preset = "super-tab",
-      ["<Tab>"] = {
+      ["<C-c>"] = {
         function(cmp)
           if not cmp.is_visible() then
             return cmp.show()

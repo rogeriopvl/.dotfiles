@@ -4,10 +4,18 @@ return {
   lazy = false,
   version = false, -- set this if you want to always pull the latest change
   opts = {
-    provider = "copilot",
+    provider = "copilotclaude",
+    auto_suggestions_provider = "copilotclaude",
+    vendors = {
+      copilotclaude = {
+        __inherited_from = "copilot",
+        model = "claude-3.5-sonnet",
+        max_tokens = 4096,
+      },
+    },
     mappings = {
-      ask = "<leader>ak"
-    }
+      ask = "<leader>ak",
+    },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
   build = "make",

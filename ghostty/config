@@ -8,6 +8,7 @@ theme = rose-pine
 # remove all window decorations
 window-decoration = false
 macos-titlebar-style = hidden
+# macos-non-native-fullscreen = true
 
 window-padding-x = 2
 window-padding-y = 4,2

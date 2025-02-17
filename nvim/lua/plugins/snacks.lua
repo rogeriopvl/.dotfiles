@@ -12,5 +12,6 @@ return {
 ╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝     ╚═╝]],
       },
     },
+    scroll = { enabled = false },
   },
 }

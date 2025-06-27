@@ -27,7 +27,7 @@ alias tma="tmux -u attach"
 
 alias python="python3"
 
-alias gs="git branch | fzf --preview 'git log -p main..{-1} --color=always {-1}' | cut -c 3- | xargs git switch"
+alias gs="git branch --sort=-committerdate | fzf --preview 'git log -p main..{-1} --color=always {-1}' | cut -c 3- | xargs git switch"
 
 # FUNCTIONS
 

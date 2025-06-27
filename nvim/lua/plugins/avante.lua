@@ -6,11 +6,10 @@ return {
   opts = {
     provider = "copilotclaude",
     auto_suggestions_provider = "copilotclaude",
-    vendors = {
+    providers = {
       copilotclaude = {
         __inherited_from = "copilot",
-        model = "claude-3.5-sonnet",
-        max_tokens = 4096,
+        model = "claude-3.7-sonnet",
       },
     },
     mappings = {

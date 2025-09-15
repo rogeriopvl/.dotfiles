@@ -4,12 +4,10 @@ return {
   lazy = false,
   version = false, -- set this if you want to always pull the latest change
   opts = {
-    provider = "copilotclaude",
-    auto_suggestions_provider = "copilotclaude",
+    provider = "copilot",
     providers = {
-      copilotclaude = {
-        __inherited_from = "copilot",
-        model = "claude-3.7-sonnet",
+      copilot = {
+        model = "claude-sonnet-4",
       },
     },
     mappings = {

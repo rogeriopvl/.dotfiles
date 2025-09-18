@@ -3,7 +3,7 @@ font-family = JetBrainsMono NFM Regular
 # disable font programming ligatures
 font-feature = -calt
 
-theme = rose-pine
+theme = Rose Pine
 
 # remove all window decorations
 window-decoration = false

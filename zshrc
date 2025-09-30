@@ -81,7 +81,7 @@ fi
 if [[ $(uname) == "Darwin" ]]; then
   . $(brew --prefix)/etc/profile.d/autojump.sh
 else
-  . /usr/share/autojump/autojump.zsh
+   [[ -s /home/rogeriopvl/.cache/yay/autojump/pkg/autojump/etc/profile.d/autojump.sh ]] && source /home/rogeriopvl/.cache/yay/autojump/pkg/autojump/etc/profile.d/autojump.sh
 fi
 
 # for shell history with FZF
@@ -94,6 +94,6 @@ eval "$(atuin init zsh)"
 if [[ $(uname) == "Darwin" ]]; then
   eval "$(/opt/homebrew/bin/mise activate zsh)"
 else
-  eval "$(/home/linuxbrew/.linuxbrew/bin/mise activate zsh)"
+  eval "$(/usr/bin/mise activate zsh)"
 fi
 

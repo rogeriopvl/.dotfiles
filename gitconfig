@@ -5,10 +5,9 @@
 [user]
     name = rogeriopvl
     email = rogerio@hey.com
-    signingkey = /Users/rogeriopvl/.ssh/id_ed25519
+    signingkey = ~/.ssh/id_ed25519.pub
 [core]
     excludesfile = /Users/rogeriopvl/.gitignore_global
-    editor = /opt/homebrew/bin/nvim
 [merge]
     tool = vimdiff
     conflictstyle = diff3

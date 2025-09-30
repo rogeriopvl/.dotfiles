@@ -12,12 +12,6 @@ export PATH="$GOPATH/bin:$PATH"
 
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
-# Linux specific envs
-if [[ $(uname) == "Linux" ]]; then
-    # homebrew linux
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi
-
 # load tokens n stuff
 source $HOME/.secretsenv
 

@@ -1,11 +1,3 @@
-ZSH=$HOME/.oh-my-zsh
-
-ZSH_THEME="robbyrussell"
-
-plugins=(git tmux)
-
-source $ZSH/oh-my-zsh.sh
-
 # disable auto-correction
 unsetopt correct_all
 
@@ -14,12 +6,24 @@ DISABLE_AUTO_TITLE=true
 
 # ALIAS
 
+# directories
+alias ls='ls --color'
+alias lsa='ls -lah --color'
+alias l='ls -lah --color'
+alias ll='ls -lh --color'
+alias la='ls -lAh --color'
+
+# search files with preview
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+
+# git
+alias g='git'
+alias gst='git status'
+
 if [[ $(uname) == "Darwin" ]]; then
   alias vlc=/Applications/VLC.app/Contents/MacOS/VLC
   alias battery="pmset -g batt | egrep \"([0-9]+\%).*\" -o --colour=auto | cut -f1 -d';'"
-  alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
   alias restart-audio="sudo launchctl stop com.apple.audio.coreaudiod && sudo launchctl start com.apple.audio.coreaudiod"
-  alias temps="tempmonitor -ds -c -a -l"
 fi
 
 alias tm="tmux -u"
@@ -54,14 +58,6 @@ if [[ $(uname) == "Darwin" ]]; then
     killall Finder
   }
 
-  function wifi_name {
-    /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'
-  }
-
-  function wifi_pass() {
-    security find-generic-password -D "AirPort network password" -a $(wifi_name) -gw
-  }
-
   function rtmp_open() {
       rtmpdump -r $1 --quiet | /Applications/VLC.app/Contents/MacOS/VLC fd://0 --playlist-autostart
   }
@@ -75,20 +71,13 @@ if [[ $(uname) == "Darwin" ]]; then
       osascript -e "display notification \"You are now muted\" with title \"🎤 off\" sound name \"Funk\""
     fi
   }
-fi
-
-# autojump
-if [[ $(uname) == "Darwin" ]]; then
-  . $(brew --prefix)/etc/profile.d/autojump.sh
 else
-   [[ -s /home/rogeriopvl/.cache/yay/autojump/pkg/autojump/etc/profile.d/autojump.sh ]] && source /home/rogeriopvl/.cache/yay/autojump/pkg/autojump/etc/profile.d/autojump.sh
+  function open() {
+    xdg-open "$@" >/dev/null 2>&1 &
+  }
 fi
 
-# for shell history with FZF
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# atuin (another history tool I'm currently trying out)
-eval "$(atuin init zsh)"
+# INIT
 
 # mise (manages programming languages versions)
 if [[ $(uname) == "Darwin" ]]; then
@@ -97,3 +86,14 @@ else
   eval "$(/usr/bin/mise activate zsh)"
 fi
 
+eval "$(starship init zsh)"
+
+# autojump
+if [[ $(uname) == "Darwin" ]]; then
+  . $(brew --prefix)/etc/profile.d/autojump.sh
+else
+   [[ -s /home/rogeriopvl/.cache/yay/autojump/pkg/autojump/etc/profile.d/autojump.sh ]] && source /home/rogeriopvl/.cache/yay/autojump/pkg/autojump/etc/profile.d/autojump.sh
+fi
+
+# atuin (another history tool I'm currently trying out)
+eval "$(atuin init zsh)"

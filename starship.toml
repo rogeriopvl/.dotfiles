@@ -1,0 +1,11 @@
+# editor completions
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# add blank line between prompts
+add_newline = true
+
+[aws]
+disabled = true
+
+[package]
+disabled = true

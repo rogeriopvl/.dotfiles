@@ -7,6 +7,8 @@ tap 'homebrew/core'
 
 brew 'mas'
 brew 'zsh'
+brew 'starship'
+brew 'bat'
 brew 'tmux'
 brew 'reattach-to-user-namespace'
 brew 'neovim'

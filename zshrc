@@ -19,6 +19,7 @@ alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 # git
 alias g='git'
 alias gst='git status'
+alias gpr='git pull --rebase'
 
 if [[ $(uname) == "Darwin" ]]; then
   alias vlc=/Applications/VLC.app/Contents/MacOS/VLC

@@ -8,7 +8,7 @@ export GOPATH=$HOME/.gocode
 export PATH="$GOPATH/bin:$PATH"
 
 # rust/cargo
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 

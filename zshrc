@@ -1,3 +1,12 @@
+ZSH=$HOME/.oh-my-zsh
+
+# ZSH_THEME="robbyrussell"
+ZSH_THEME=""
+
+plugins=(git tmux)
+
+source $ZSH/oh-my-zsh.sh
+
 # disable auto-correction
 unsetopt correct_all
 
@@ -6,20 +15,8 @@ DISABLE_AUTO_TITLE=true
 
 # ALIAS
 
-# directories
-alias ls='ls --color'
-alias lsa='ls -lah --color'
-alias l='ls -lah --color'
-alias ll='ls -lh --color'
-alias la='ls -lAh --color'
-
 # search files with preview
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
-
-# git
-alias g='git'
-alias gst='git status'
-alias gpr='git pull --rebase'
 
 if [[ $(uname) == "Darwin" ]]; then
   alias vlc=/Applications/VLC.app/Contents/MacOS/VLC

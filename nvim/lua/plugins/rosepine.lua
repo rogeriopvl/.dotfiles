@@ -1,6 +1,6 @@
 return {
   "rose-pine/neovim",
-  name = "rosepine",
+  name = "rose-pine",
   lazy = false,
   priority = 1000,
   opts = {},

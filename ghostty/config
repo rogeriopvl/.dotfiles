@@ -2,6 +2,7 @@ font-family = JetBrainsMono NFM Regular
 
 # disable font programming ligatures
 font-feature = -calt
+font-size = 14
 
 theme = Rose Pine
 

@@ -20,3 +20,6 @@ keybind = super+enter=toggle_fullscreen
 
 # optionally load linux specific config if it exists
 config-file = ?linux.config
+
+# Slowdown mouse scrolling
+mouse-scroll-multiplier = 0.95

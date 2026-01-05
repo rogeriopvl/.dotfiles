@@ -118,7 +118,7 @@
       "KC_SLSH",
       "KC_RSFT",
       "KC_NO",
-      "KC_NO",
+      "KC_UP",
       "KC_NO",
       "KC_NO",
       "KC_SPC",
@@ -126,9 +126,9 @@
       "MO(1)",
       "KC_RCTL",
       "KC_NO",
-      "KC_NO",
-      "KC_NO",
-      "KC_NO"
+      "KC_LEFT",
+      "KC_DOWN",
+      "KC_RGHT"
     ],
     [
       "RGB_TOG",
@@ -338,7 +338,7 @@
       "KC_SLSH",
       "KC_RSFT",
       "KC_NO",
-      "KC_NO",
+      "KC_UP",
       "KC_NO",
       "KC_NO",
       "KC_SPC",
@@ -346,9 +346,9 @@
       "MO(3)",
       "KC_RCTL",
       "KC_NO",
-      "KC_NO",
-      "KC_NO",
-      "KC_NO"
+      "KC_LEFT",
+      "KC_DOWN",
+      "KC_RGHT"
     ],
     [
       "RGB_TOG",

@@ -3,13 +3,6 @@ export LANG=en_US.UTF-8
 
 export EDITOR=$(which nvim)
 
-# for GOLANG external modules
-export GOPATH=$HOME/.gocode
-export PATH="$GOPATH/bin:$PATH"
-
-# rust/cargo
-# . "$HOME/.cargo/env"
-
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 # load tokens n stuff

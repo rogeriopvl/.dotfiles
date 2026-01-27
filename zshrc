@@ -84,6 +84,7 @@ else
   eval "$(/usr/bin/mise activate zsh)"
 fi
 
+STARTSHIP_CONFIG=${HOME}/.config/starship.toml
 eval "$(starship init zsh)"
 
 # autojump

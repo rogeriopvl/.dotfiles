@@ -30,10 +30,11 @@ if [ ! -d "$HOME/.config" ]; then
 fi
 
 ln -s $HOME/.dotfiles/alacritty $HOME/.config/alacritty
+ln -s $HOME/.dotfiles/ghostty $HOME/.config/ghostty
 ln -s $HOME/.dotfiles/nvim $HOME/.config/nvim
-ln -s $HOME/.dotfiles/yabai $HOME/.config/yabai
-ln -s $HOME/.dotfiles/skhd $HOME/.config/skhd
 ln -s $HOME/.dotfiles/aerospace $HOME/.config/aerospace
+# ln -s $HOME/.dotfiles/yabai $HOME/.config/yabai
+# ln -s $HOME/.dotfiles/skhd $HOME/.config/skhd
 echo "✅ dotfiles"
 
 echo "⏳installing brewfile packages..."

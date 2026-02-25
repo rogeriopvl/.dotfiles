@@ -6,6 +6,8 @@ defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool FALSE
 defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool FALSE
 
+# NOT WORKING, need to go manually Accessibility --> Zoom --> Use scroll gesture
+# with modifier keys to zoom
 # Use scroll gesture with the Ctrl (^) modifier key to zoom
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144

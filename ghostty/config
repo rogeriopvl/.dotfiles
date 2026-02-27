@@ -2,14 +2,14 @@ font-family = JetBrainsMono NFM Regular
 
 # disable font programming ligatures
 font-feature = -calt
-font-size = 14
+font-size = 13
 
 theme = Rose Pine
 
 # remove all window decorations
 window-decoration = false
 macos-titlebar-style = hidden
-# macos-non-native-fullscreen = true
+macos-non-native-fullscreen = true
 
 window-padding-x = 4
 window-padding-y = 4
@@ -23,3 +23,5 @@ config-file = ?linux.config
 
 # Slowdown mouse scrolling
 mouse-scroll-multiplier = 0.95
+
+macos-option-as-alt = false

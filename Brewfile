@@ -24,6 +24,8 @@ brew 'ripgrep'
 brew 'gh'
 brew 'mise'
 brew 'jq'
+brew 'zola'
+brew 'btop'
 
 # CASKS (GUI APPS)
 
@@ -43,10 +45,10 @@ cask 'coconutbattery'
 cask 'vlc'
 cask 'webtorrent'
 cask 'visual-studio-code'
-cask 'docker'
+cask 'docker-desktop'
 cask 'signal'
 cask 'calibre'
-# cask 'lastfm'
+cask 'lastfm'
 
 # MAC APP STORE APPS
 mas 'Pixelmator', id: 407963104

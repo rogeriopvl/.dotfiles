@@ -68,6 +68,7 @@ outer.right = 0
 # 'main' binding mode must be always presented
 # Fallback value (if you omit the key): mode.main.binding = {}
 [mode.main.binding]
+alt-g = 'fullscreen'
 
 # All possible keys:
 # - Letters.        a, b, c, ..., z
@@ -123,7 +124,7 @@ alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
-# alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
+# alt-a = 'workspace A'
 # alt-b = 'workspace B'
 # alt-d = 'workspace D'
 # alt-f = 'workspace F'
@@ -175,10 +176,6 @@ alt-shift-w = 'move-node-to-workspace W'
 alt-shift-x = 'move-node-to-workspace X'
 alt-shift-y = 'move-node-to-workspace Y'
 alt-shift-z = 'move-node-to-workspace Z'
-# alt-shift-c = 'move-node-to-workspace C'
-# alt-shift-e = 'move-node-to-workspace E'
-# alt-shift-i = 'move-node-to-workspace I'
-# alt-shift-n = 'move-node-to-workspace N'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
@@ -211,41 +208,17 @@ alt-shift-l = ['join-with right', 'mode main']
 X = 'secondary'
 
 [[on-window-detected]]
-if.app-id = 'org.mozilla.firefox'
-run = "move-node-to-workspace 1"
+if.app-name-regex-substring = 'WhatsApp'
+run = 'layout floating'
 
 [[on-window-detected]]
-if.app-id = 'org.alacritty'
-run = "move-node-to-workspace 2"
+if.app-name-regex-substring = 'Signal'
+run = 'layout floating'
 
 [[on-window-detected]]
-if.app-id = 'com.google.Chrome'
-run = "move-node-to-workspace 2"
+if.app-name-regex-substring = 'Finder'
+run = 'layout floating'
 
 [[on-window-detected]]
-if.app-id = 'com.tinyspeck.slackmacgap'
-run = "move-node-to-workspace 3"
-
-[[on-window-detected]]
-if.app-id = 'com.openai.chat'
-run = "move-node-to-workspace 3"
-
-[[on-window-detected]]
-if.app-id = 'com.cron.electron'
-run = "move-node-to-workspace 4"
-
-[[on-window-detected]]
-if.app-id = 'org.whispersystems.signal-desktop'
-run = "move-node-to-workspace 5"
-
-[[on-window-detected]]
-if.app-id = 'com.apple.mail'
-run = "move-node-to-workspace 5"
-
-[[on-window-detected]]
-if.app-id = 'org.apple.Music'
-run = "move-node-to-workspace 6"
-
-[[on-window-detected]]
-if.app-id = 'fm.last.Scrobbler'
-run = "move-node-to-workspace 6"
+if.app-name-regex-substring = 'Brave'
+run = 'move-node-to-workspace 1'

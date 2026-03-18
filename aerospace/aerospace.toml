@@ -139,6 +139,10 @@ if.app-name-regex-substring = 'Signal'
 run = ['layout floating', 'move-node-to-workspace 5']
 
 [[on-window-detected]]
+if.app-name-regex-substring = 'Telegram'
+run = ['layout floating', 'move-node-to-workspace 5']
+
+[[on-window-detected]]
 if.app-name-regex-substring = 'Finder'
 run = 'layout floating'
 
@@ -149,6 +153,7 @@ run = ['layout floating', 'move-node-to-workspace 9']
 [[on-window-detected]]
 if.app-name-regex-substring = 'Last.fm'
 run = ['layout floating', 'move-node-to-workspace 9']
+
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'Brave'

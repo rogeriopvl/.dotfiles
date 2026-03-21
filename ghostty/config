@@ -2,17 +2,18 @@ font-family = JetBrainsMono NFM Regular
 
 # disable font programming ligatures
 font-feature = -calt
-font-size = 13
+font-size = 14
 
-theme = Rose Pine
+theme = Rose Pine Moon
 
 # remove all window decorations
-window-decoration = false
+# window-decoration = false
 macos-titlebar-style = hidden
 macos-non-native-fullscreen = true
 
 window-padding-x = 4
 window-padding-y = 4
+window-padding-balance = true
 
 mouse-hide-while-typing = true
 

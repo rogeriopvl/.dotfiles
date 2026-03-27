@@ -13,5 +13,5 @@ export TMUX_SESSIONIZER_DIRS=(
   "$HOME/src/projects/learn"
   "$HOME/src/projects/httpcats"
   "$HOME/src/projects/hushcat"
-  "$HOME/src/projects/studentfinance"
+  "$HOME/src/projects/scilife"
 )

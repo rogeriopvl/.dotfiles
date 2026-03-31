@@ -1,7 +1,7 @@
 after-login-command = []
 
 after-startup-command = [
-  'exec-and-forget borders active_color=0xffea9a97 inactive_color=0xff494d64 width=5.0'
+  'exec-and-forget borders active_color=0xffea9a97 inactive_color=0xff494d64 width=5.0 blacklist="Loom"'
 ]
 
 start-at-login = true

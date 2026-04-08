@@ -11,6 +11,7 @@ brew 'starship'
 brew 'bat'
 brew 'tmux'
 brew 'reattach-to-user-namespace'
+brew install tmuxpack/tpack/tpack
 brew 'neovim'
 brew 'autojump'
 brew 'fzf'

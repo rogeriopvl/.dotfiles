@@ -15,6 +15,8 @@ DISABLE_AUTO_TITLE=true
 
 # ALIAS
 
+alias k="kubectl"
+
 # search files with preview
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 
@@ -70,6 +72,8 @@ if [[ $(uname) == "Darwin" ]]; then
     fi
   }
 else
+  alias zed="/usr/bin/zeditor"
+
   function open() {
     xdg-open "$@" >/dev/null 2>&1 &
   }

@@ -15,3 +15,6 @@ export TMUX_SESSIONIZER_DIRS=(
   "$HOME/src/projects/hushcat"
   "$HOME/src/projects/scilife"
 )
+
+# uv
+export PATH="/Users/rogeriopvl/.local/bin:$PATH"

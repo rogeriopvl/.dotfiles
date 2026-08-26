@@ -1,0 +1,24 @@
+onboarding = false
+
+[theme]
+name = "rose-pine"
+auto_switch = false
+
+# Rosé Pine Moon: overrides only the 8 tokens that differ from rose-pine (Main),
+# plus sidebar_bg (Main leaves it "reset", which would inherit the terminal's
+# Main-base #191724 and clash with Moon's #232136 panels).
+# accent/text/subtext0/overlay0/overlay1/mauve/yellow/red/teal/peach are
+# byte-identical between Main and Moon upstream, so they need no override.
+[theme.custom]
+panel_bg      = "#232136"  # base
+sidebar_bg    = "#232136"  # base
+surface0      = "#2a273f"  # surface
+surface1      = "#393552"  # overlay
+surface_dim   = "#393552"  # overlay
+active_row_bg = "#393552"  # overlay
+selection_bg  = "#44415a"  # highlight med
+green         = "#3e8fb0"  # pine
+blue          = "#3e8fb0"  # pine
+
+[ui]
+tab_bar_position = "bottom"

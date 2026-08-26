@@ -35,6 +35,11 @@ ln -s $HOME/.dotfiles/nvim $HOME/.config/nvim
 ln -s $HOME/.dotfiles/aerospace $HOME/.config/aerospace
 # ln -s $HOME/.dotfiles/yabai $HOME/.config/yabai
 # ln -s $HOME/.dotfiles/skhd $HOME/.config/skhd
+
+# herdr keeps logs, sockets and session state in ~/.config/herdr,
+# so only config.toml is symlinked instead of the whole directory
+mkdir -p "$HOME/.config/herdr"
+ln -s $HOME/.dotfiles/herdr/config.toml $HOME/.config/herdr/config.toml
 echo "✅ dotfiles"
 
 echo "⏳installing brewfile packages..."

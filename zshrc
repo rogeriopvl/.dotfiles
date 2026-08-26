@@ -95,7 +95,7 @@ eval "$(starship init zsh)"
 if [[ $(uname) == "Darwin" ]]; then
   . $(brew --prefix)/etc/profile.d/autojump.sh
 else
-   [[ -s /home/rogeriopvl/.cache/yay/autojump/pkg/autojump/etc/profile.d/autojump.sh ]] && source /home/rogeriopvl/.cache/yay/autojump/pkg/autojump/etc/profile.d/autojump.sh
+   [[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
 fi
 
 # atuin (another history tool I'm currently trying out)

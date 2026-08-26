@@ -1,4 +1,5 @@
-font-family = JetBrainsMono NFM Light
+# font-family = JetBrainsMono NFM Light
+font-family = Maple Mono NF
 
 # disable font programming ligatures
 font-feature = -calt

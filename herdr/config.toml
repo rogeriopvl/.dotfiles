@@ -22,3 +22,10 @@ blue          = "#3e8fb0"  # pine
 
 [ui]
 tab_bar_position = "bottom"
+
+# tmux-style pane splits: % = left/right, " = top/bottom.
+# (Herdr names splits after the divider orientation, so "vertical" is the
+# left/right split -- same sense tmux's % has.)
+[keys]
+split_vertical = "prefix+%"
+split_horizontal = 'prefix+"'

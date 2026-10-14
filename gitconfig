@@ -37,3 +37,6 @@
   allowedSignersFile = ~/.ssh/allowed_signers
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+
+[includeIf "gitdir:~/src/projects/scilife/"]
+    path = ~/.gitconfig-scilife
